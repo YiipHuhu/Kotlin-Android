@@ -11,13 +11,17 @@ class LobbyActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lobby)
 
-        val options = listOf("Atividade 1", "Atividade 2") // Adicione as opções que quiser
+        val options = listOf(
+            "Verificador de idade",
+            "Calculadora Simples",
+            "Verificador de Senha",
+            "Conversor de Temperatura (Desafio Extra)") // Adicione as opções que quiser
         val recyclerView: RecyclerView = findViewById(R.id.optionsRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val adapter = LobbyAdapter(options) { option ->
             when (option) {
-                "Atividade 1" -> startActivity(Intent(this, Tela1Activity::class.java))
+                "Verificador de idade" -> startActivity(Intent(this, Tela1Activity::class.java))
                 // "Atividade 2" -> startActivity(Intent(this, Tela2Activity::class.java))
                 // Adicione mais navegações conforme necessário
             }
