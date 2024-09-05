@@ -3,26 +3,36 @@ package com.example.myapplication
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class LobbyAdapter(private val options: List<String>, private val clickListener: (String) -> Unit) :
-    RecyclerView.Adapter<LobbyAdapter.LobbyViewHolder>() {
-
-    class LobbyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val optionTextView: TextView = itemView.findViewById(R.id.optionTextView)
-    }
+class LobbyAdapter(
+    private val options: List<String>,
+    private val onClick: (String) -> Unit
+) : RecyclerView.Adapter<LobbyAdapter.LobbyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LobbyViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_option, parent, false)
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_option, parent, false)
         return LobbyViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: LobbyViewHolder, position: Int) {
         val option = options[position]
-        holder.optionTextView.text = option
-        holder.itemView.setOnClickListener { clickListener(option) }
+        holder.bind(option, onClick)
     }
 
-    override fun getItemCount() = options.size
+    override fun getItemCount(): Int = options.size
+
+    class LobbyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val activityButton: Button = itemView.findViewById(R.id.activityButton)
+
+        fun bind(option: String, onClick: (String) -> Unit) {
+            activityButton.text = option
+            activityButton.setOnClickListener {
+                onClick(option)
+            }
+        }
+    }
 }
