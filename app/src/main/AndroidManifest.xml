@@ -23,6 +23,9 @@
 
         <activity android:name=".LobbyActivity" />
         <activity android:name=".Tela1Activity" />
+        <activity android:name=".Tela2Activity" />
+        <activity android:name=".Tela3Activity" />
+        <activity android:name=".Tela4Activity" />
     </application>
 
 </manifest>
