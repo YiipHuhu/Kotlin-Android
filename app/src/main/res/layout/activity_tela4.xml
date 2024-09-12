@@ -21,7 +21,6 @@
 
         <Button
             android:id="@+id/btnCompare"
-            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="186dp"
             android:layout_height="wrap_content"
             android:text="Comparar" />
@@ -32,7 +31,7 @@
         android:id="@+id/txtResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Resultado"
+        android:text="Resultado:"
         android:textSize="18sp"
         android:layout_marginTop="16dp" />
 

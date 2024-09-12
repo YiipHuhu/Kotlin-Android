@@ -28,14 +28,12 @@
 
         <Button
             android:id="@+id/btnCompare"
-            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="186dp"
             android:layout_height="wrap_content"
             android:text="Somar" />
 
         <Button
             android:id="@+id/btnSubtraction"
-            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="174dp"
             android:layout_height="wrap_content"
             android:text="Subtrair" />
@@ -45,7 +43,7 @@
         android:id="@+id/txtResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Resultado"
+        android:text="Resultado:"
         android:textSize="18sp"
         android:layout_marginTop="16dp" />
 
