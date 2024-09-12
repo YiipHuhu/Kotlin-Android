@@ -24,7 +24,7 @@ class LobbyActivity : AppCompatActivity() {
                 "Verificador de idade" -> startActivity(Intent(this, Tela1Activity::class.java))
                 "Calculadora Simples" -> startActivity(Intent(this, Tela2Activity::class.java))
                 "Verificador de Senha" -> startActivity(Intent(this, Tela3Activity::class.java))
-                //"Conversor de Temperatura (Desafio Extra)" -> startActivity(Intent(this, Tela4Activity::class.java))
+                "Conversor de Temperatura (Desafio Extra)" -> startActivity(Intent(this, Tela4Activity::class.java))
                 // "Atividade 2" -> startActivity(Intent(this, Tela2Activity::class.java))
             }
         }
